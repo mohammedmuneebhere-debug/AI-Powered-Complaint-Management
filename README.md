@@ -46,8 +46,8 @@ Each node builds on the previous one, producing a full QA intelligence package â
 ### 2. Dual-Model Strategy for Speed + Depth
 | Model | Role | Why |
 |-------|------|-----|
-| `gemma2-9b-it` | Extraction, risk, completeness | Fast, low-latency structured output |
-| `llama-3.3-70b-versatile` | Chat, root cause, CAPA | Deeper reasoning for complex analysis |
+| `openai/gpt-oss-20b` | Extraction, risk, completeness | Fast structured output (replaces gemma2-9b-it) |
+| `openai/gpt-oss-120b` | Chat, root cause, CAPA | Deeper reasoning (replaces llama-3.3-70b) |
 
 This split keeps intake snappy while reserving heavy reasoning for investigation tasks.
 
@@ -85,7 +85,7 @@ Groq's inference speed combined with LangGraph's structured orchestration means 
 | **Frontend** | React 18, Redux Toolkit, React Router, Vite |
 | **Backend** | Python 3.11+, FastAPI, SQLAlchemy, Pydantic |
 | **AI Orchestration** | LangGraph (multi-node state machine) |
-| **LLM Provider** | Groq API (`gemma2-9b-it`, `llama-3.3-70b-versatile`) |
+| **LLM Provider** | Groq API (`openai/gpt-oss-20b`, `openai/gpt-oss-120b`) |
 | **Database** | PostgreSQL (production) / SQLite (local dev) |
 | **Document Parsing** | pdfplumber, python-docx, native EML parser |
 | **Typography** | Google Inter |
