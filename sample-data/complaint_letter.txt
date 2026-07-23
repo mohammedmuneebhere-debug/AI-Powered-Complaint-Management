@@ -1,0 +1,49 @@
+PHARMACEUTICAL QUALITY COMPLAINT FORM
+
+Date: March 8, 2024
+Complaint Reference: CQA-2024-0342
+
+TO: Quality Assurance Department
+    NovaPharm Manufacturing Ltd.
+    1200 Industrial Parkway, Suite 400
+    Boston, MA 02101
+
+FROM: MediCare Distribution Inc.
+       Attn: Mr. James Rodriguez, Warehouse Manager
+       450 Commerce Drive, Chicago, IL 60601
+
+COMPLAINT SOURCE: Formal Written Letter
+
+CUSTOMER DETAILS:
+Organization: MediCare Distribution Inc.
+Contact Person: James Rodriguez
+Phone: +1-555-0287
+Email: j.rodriguez@medicaredist.com
+
+PRODUCT INFORMATION:
+Product Name: Amoxicillin Capsules
+Product Strength: 250mg
+Batch/Lot Number: AMX-2023-1156
+Manufacturing Date: 22-June-2023
+Expiry Date: 21-June-2025
+Quantity Affected: 85 kg (approximately 340,000 capsules)
+
+COMPLAINT TYPE: Packaging Defect
+
+DETAILED DESCRIPTION:
+During warehouse receiving inspection on March 7, 2024, we discovered that 12 out of 48 shipping cartons from batch AMX-2023-1156 have compromised primary packaging. Specifically, the blister packs show signs of moisture ingress with visible condensation inside the foil seals. Three cartons had torn secondary packaging, exposing the blister packs to ambient humidity during transit.
+
+The affected cartons were part of shipment PO-88421 received on March 5, 2024. We have isolated all affected inventory in our quarantine area (Zone Q-14).
+
+INITIAL ASSESSMENT:
+- Initial Severity: High
+- Priority: Urgent
+- Potential impact on product stability and efficacy
+
+We request batch recall assessment and replacement shipment at your earliest convenience.
+
+Respectfully submitted,
+
+James Rodriguez
+Warehouse Manager
+MediCare Distribution Inc.

@@ -1,0 +1,27 @@
+.app-footer {
+  margin-top: auto;
+  padding: 20px 24px;
+  border-top: 1px solid var(--surface-border);
+  background: rgba(8, 20, 24, 0.5);
+}
+
+.footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.footer-divider {
+  opacity: 0.5;
+}
+
+.footer-ai {
+  color: #5eead4;
+  font-weight: 500;
+}
