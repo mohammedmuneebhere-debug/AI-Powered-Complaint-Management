@@ -20,9 +20,11 @@ async def lifespan(app: FastAPI):
         logger.info("Database connected: %s", settings.database_url.split("@")[-1] if "@" in settings.database_url else settings.database_url)
     except OperationalError as e:
         logger.error(
-            "Database connection failed. If using PostgreSQL, ensure it is running "
-            "(docker compose up -d) or switch to SQLite in .env: "
-            "DATABASE_URL=sqlite:///./complaints.db"
+            "Database connection failed (%s). "
+            "SQLite: DATABASE_URL=sqlite:///./complaints.db | "
+            "Local Postgres: docker compose up -d | "
+            "Supabase: paste your URI from Project Settings → Database into DATABASE_URL",
+            settings.database_provider,
         )
         raise e
     yield
@@ -61,6 +63,6 @@ def health_check():
     return {
         "status": "healthy" if db_ok else "degraded",
         "database": "connected" if db_ok else "disconnected",
-        "db_type": "postgresql" if settings.database_url.startswith("postgresql") else "sqlite",
+        "db_type": settings.database_provider,
         "groq_configured": bool(settings.groq_api_key and settings.groq_api_key != "your_groq_api_key_here"),
     }

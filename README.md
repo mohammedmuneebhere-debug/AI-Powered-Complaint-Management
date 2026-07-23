@@ -208,17 +208,30 @@ npm run dev
 
 Open **http://localhost:5173**
 
-### 4. PostgreSQL (production)
+### 4. Database options
+
+**SQLite (default)** — works immediately, no setup. Data stored in `backend/complaints.db`.
+
+**Local PostgreSQL** — for production-like dev:
 
 ```bash
 docker compose up -d
 ```
 
-Update `backend/.env`:
-
 ```env
 DATABASE_URL=postgresql://complaint_user:complaint_pass@localhost:5432/complaints_db
 ```
+
+**Supabase** — paste your connection URI from **Project Settings → Database → Connect**:
+
+```env
+# Session pooler (recommended for FastAPI / SQLAlchemy)
+DATABASE_URL=postgresql://postgres.[PROJECT-REF]:[PASSWORD]@aws-0-[REGION].pooler.supabase.com:5432/postgres
+```
+
+The backend auto-detects Supabase URLs, enables SSL, and configures pooling for the transaction pooler (port `6543`). Tables are created on first startup — no extra migration step needed.
+
+See `backend/.env.example` for all connection string formats.
 
 ---
 
@@ -227,7 +240,10 @@ DATABASE_URL=postgresql://complaint_user:complaint_pass@localhost:5432/complaint
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `GROQ_API_KEY` | Groq API key (**required**) | — |
-| `DATABASE_URL` | Database connection string | `sqlite:///./complaints.db` |
+| `DATABASE_URL` | SQLite, PostgreSQL, or Supabase URI | `sqlite:///./complaints.db` |
+| `DATABASE_SSL_MODE` | SSL mode for remote PostgreSQL / Supabase | `require` |
+| `DATABASE_POOL_SIZE` | SQLAlchemy pool size (non-pooler) | `5` |
+| `DATABASE_MAX_OVERFLOW` | Extra connections beyond pool size | `10` |
 | `CORS_ORIGINS` | Allowed frontend origins | `http://localhost:5173` |
 
 ---
